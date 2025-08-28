@@ -11,7 +11,7 @@
  return $soma / count($notas);
  }
  }
-
+ php>
             - name: Run PHP tests
   # You may pin to the exact commit or the version.
   # uses: alleyinteractive/action-test-php@d00a264a64188e3e70a2322e2284203aa2b410fd
