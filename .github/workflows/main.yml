@@ -1,0 +1,67 @@
+            - name: Run PHP tests
+  # You may pin to the exact commit or the version.
+  # uses: alleyinteractive/action-test-php@d00a264a64188e3e70a2322e2284203aa2b410fd
+  uses: alleyinteractive/action-test-php@v1
+  with:
+    # PHP version to use
+    php-version: # optional, default is latest
+    # PHP tools to install (comma-separated)
+    php-tools: # optional, default is composer
+    # Additional PHP extensions to install (comma-separated)
+    php-extensions: # optional, default is apcu, bcmath, calendar, ctype, curl, date, dom, exif, filter, ftp, gd, gmp, gnupg, hash, iconv, igbinary, intl, json, libxml, mbstring, memcache, memcached, mysqli, mysqlnd, openssl, pcntl, pcre, pdo, pdo_mysql, pdo_sqlite, phar, posix, reflection, session, shmop, simplexml, soap, sockets, sodium, spl, sqlite3, ssh2, standard, sysvsem, sysvshm, timezonedb, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+    # Enable code coverage
+    php-coverage: # optional, default is none
+    # Specify the WordPress version to use (false to skip)
+    wordpress-version: # optional, default is latest
+    # Enable WordPress multisite (only works with wordpress-version)
+    wordpress-multisite: # optional, default is false
+    # Shorthand for hosting provider (pantheon, vip, or false)
+    wordpress-host: # optional, default is vip
+    # Directory to run the commands in
+    working-directory: # optional, default is .
+    # Path to the dependency file to use for caching
+    cache-dependency-path: # optional, default is composer.lock
+    # Skip composer install
+    install-skip: # optional, default is false
+    # Skip composer install
+    skip-install: # optional, default is false
+    # Command to run composer install
+    install-command: # optional, default is composer install --prefer-dist --no-interaction --no-progress
+    # Skip composer audit
+    audit-skip: # optional, default is false
+    # Skip composer audit
+    skip-audit: # optional, default is false
+    # Command to run composer audit
+    audit-command: # optional, default is composer audit --no-dev --locked --ansi --no-interaction
+    # Skip tests
+    test-skip: # optional, default is false
+    # Skip tests
+    skip-test: # optional, default is false
+    # Skip the installation of the WordPress core test suite. Useful if you are not using the WordPress core testing framework (Mantle Testkit).
+    skip-core-test-suite: # optional, default is false
+    # Skip installing WordPress
+    skip-wordpress-install: # optional, default is false
+    # Command to run tests
+    test-command: # optional, default is composer run-script test
+    # Command to run build
+    build-command: # optional, default is 
+    # GitHub token for accessing private repositories via composer
+    github-token: # optional, default is 
+    # Skip starting Docker-based services (mysql, redis, memcached)
+    skip-services: # optional, default is false
+    # Skip starting Docker-based services (mysql, redis, memcached)
+    services-skip: # optional, default is false
+          
+
+            - name: Install Dependencies
+  # You may pin to the exact commit or the version.
+  # uses: Lamparter/Install-Dependencies@69e8bc5cc258a018f06b081bab8714c587c0b094
+  uses: Lamparter/Install-Dependencies@v1.2.1
+  with:
+    # The platform to install dependencies for. See available values at https://platform.uno/docs/articles/external/uno.check/doc/using-uno-check.html
+    target-platform: # optional, default is all
+    # Installs and sets the .NET SDK Version
+    dotnet-version: # optional, default is 8.0.x
+    # The version of the Windows SDK
+    sdk-version: # optional, default is 19041
+          
